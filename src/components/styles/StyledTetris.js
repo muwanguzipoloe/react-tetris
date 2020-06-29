@@ -9,7 +9,7 @@ export const StyledTetrisWrapper = styled.div`
     background-size: cover; 
     overflow: hidden;
 `
-export const StyledTetris = Styled.div`
+export const StyledTetris = styled.div`
     display: flex;
     align-items:  flex-start;
     padding: 40px;
