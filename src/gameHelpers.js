@@ -6,13 +6,12 @@ export const STAGE_HEIGHT = 20;
 // This multi-dimensional array represents the grid
 export const createStage = () => 
   Array.from(Array(STAGE_HEIGHT), () => 
-    new Array(STAGE_WIDTH).fill([0, 'clear'])
-  )
+    new Array(STAGE_WIDTH).fill([0, 'clear']),
+  );
 
-  export const checkColllision = (player, stage, {x: moveX, y: moveY }) => {
+  export const checkCollision = (player, stage, {x: moveX, y: moveY }) => {
     for (let y = 0; y < player.tetromino.length; y += 1){
       for (let x = 0; x < player.tetromino[y].length; x += 1) {
-          
             // 1. Check that we're on an actual Tetromino cell
             if (player.tetromino[y][x] !== 0){
               if(
