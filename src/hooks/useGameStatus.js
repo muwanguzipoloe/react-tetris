@@ -15,4 +15,10 @@ export const useGameStatus = rowsCleared => {
             setRows(prev => prev + rowsCleared);
         }
     }, [level, linePoints, rowsCleared]);
+
+    useEffect(() => {
+        calcScore();
+    }, [calcScore, rowsCleared, score]);
+
+    return [score, setScore, rows, setRows, level, setLevel];
 }
