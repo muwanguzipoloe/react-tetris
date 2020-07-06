@@ -34,6 +34,7 @@ const Tetris = () => {
     console.log("test")
     // Reset everything
     setStage(createStage());
+    setDropTime(1000);
     resetPlayer();
     setGameOver(false);
   }
