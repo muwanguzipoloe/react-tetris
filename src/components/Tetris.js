@@ -56,12 +56,14 @@ const Tetris = () => {
   const keyUp = ({ keyCode }) => {
     if (!gameOver) {
       if (keyCode === 40) {
+        console.log("interval on");
         setDropTime(1000);
       }
     }
   }
 
   const dropPlayer = () => {
+    console.log("interval off");
     setDropTime(null);
     drop();
   }
